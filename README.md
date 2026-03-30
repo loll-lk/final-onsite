@@ -1,6 +1,5 @@
 # Adham Pr | Personal Portfolio Website
 
-![Screenshot](![Screenshot_28-3-2026_134820_final-protofilo-adham netlify app]
 
 ## Live Demo
 🔗 [View the website](https://final-protofilo-adham.netlify.app/)
