@@ -1,428 +1,115 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-    <meta charset="UTF-8"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-    <title>Portfolio</title> 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"> 
-    <script src="https://cdn.tailwindcss.com"></script> 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"> 
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet"> 
-    <link rel="stylesheet" href="./css/style.css"> 
-</head> 
-<body class="font-poppins bg-[var(--light-bg)] transition-all duration-300 overflow-x-hidden"> 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adham Pr | Home</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="font-poppins bg-[var(--light-bg)] transition-all duration-300 overflow-x-hidden">
 
     <aside class="sidebar-desktop d-none d-lg-flex flex-column align-items-center">
         <div class="py-4 w-100 text-center mb-5">
-            <a class="text-decoration-none fw-bold" href="#"> 
-                <span class="logo-text text-2xl"><i class="fas fa-code"></i></span> 
-            </a> 
+            <a class="text-decoration-none fw-bold" href="index.html">
+                <span class="logo-text text-2xl"><i class="fas fa-code"></i></span>
+            </a>
         </div>
         <ul class="nav flex-column w-100 text-center gap-4 px-2 m-0">
-            <li class="nav-item"> 
-                <a class="nav-link-custom active" href="#home" title="Home"><i class="fas fa-home text-xl"></i></a> 
-            </li> 
-            <li class="nav-item"> 
-                <a class="nav-link-custom" href="#about" title="About"><i class="fas fa-user text-xl"></i></a> 
-            </li> 
-            <li class="nav-item"> 
-                <a class="nav-link-custom" href="#projects" title="Projects"><i class="fas fa-briefcase text-xl"></i></a> 
-            </li> 
-            <li class="nav-item"> 
-                <a class="nav-link-custom" href="#contact" title="Contact"><i class="fas fa-envelope text-xl"></i></a> 
-            </li> 
+            <li class="nav-item"> <a class="nav-link-custom active" href="./index.html" title="Home"><i class="fas fa-home text-xl"></i></a> </li>
+            <li class="nav-item"> <a class="nav-link-custom" href="./about.html" title="About"><i class="fas fa-user text-xl"></i></a> </li>
+            <li class="nav-item"> <a class="nav-link-custom" href="./my-project.html" title="Projects"><i class="fas fa-briefcase text-xl"></i></a> </li>
+            <li class="nav-item"> <a class="nav-link-custom" href="./contact.html" title="Contact"><i class="fas fa-envelope text-xl"></i></a> </li>
         </ul>
     </aside>
 
     <div class="mobile-nav-wrapper d-lg-none fixed-top w-100">
         <div class="mobile-header d-flex justify-content-between align-items-center py-3 px-4">
-            <a class="text-decoration-none fw-bold m-0" href="#"> 
-                <span class="logo-text text-2xl">MY one</span> 
-            </a> 
-            <button id="mobileMenuBtn" class="border-0 bg-transparent text-2xl text-[var(--violet-dark)] transition-all"> 
+            <a class="text-decoration-none fw-bold m-0" href="index.html">
+                <span class="logo-text text-2xl">MY one</span>
+            </a>
+            <button id="mobileMenuBtn" class="border-0 bg-transparent text-2xl text-[var(--violet-dark)] transition-all">
                 <i class="fas fa-bars"></i>
-            </button> 
+            </button>
         </div>
         <div id="mobileMenu" class="mobile-dropdown">
             <ul class="mobile-nav-list m-0 p-3 text-center list-unstyled">
-                <li><a class="mobile-nav-link" href="#home">Home</a></li>
-                <li><a class="mobile-nav-link" href="#about">About</a></li>
-                <li><a class="mobile-nav-link" href="#projects">Projects</a></li>
-                <li><a class="mobile-nav-link" href="#contact">Contact</a></li>
+                <li><a class="mobile-nav-link" href="./index.html">Home</a></li>
+                <li><a class="mobile-nav-link" href="./about.html">About</a></li>
+                <li><a class="mobile-nav-link" href="./my-project.html">Projects</a></li>
+                <li><a class="mobile-nav-link" href="./contact.html">Contact</a></li>
             </ul>
         </div>
     </div>
 
-    <div class="floating-controls fixed bottom-6 right-6 flex flex-row gap-3 z-[999]">
-        <button id="backToTop" class="floating-btn gradient-btn opacity-0 invisible"> 
-            <i class="fas fa-arrow-up"></i> 
-        </button>
-        <button id="themeToggle" class="floating-btn white-btn"> 
-            <i class="fas fa-moon"></i> 
-        </button> 
+    <div class="floating-controls fixed bottom-6 right-6 z-[999]">
+        <button id="themeToggle" class="floating-btn white-btn"> <i class="fas fa-moon"></i> </button>
     </div>
 
     <main id="main-content">
-        
-        <section id="home" class="hero-section d-flex align-items-center min-h-[100vh] relative overflow-hidden"> 
-            <div class="container"> 
-                <div class="row align-items-center min-vh-100"> 
-                    <div class="col-lg-6 order-lg-2 text-center mb-5 mb-lg-0"> 
-                        <div class="hero-image-container flex justify-center items-center"> 
-                            <div class="hero-image-wrapper relative w-[300px] h-[300px] md:w-[350px] md:h-[350px]"> 
-                                <img src="./5861469601638583971_120.jpg" alt="Adham Profile" class="hero-image w-full h-full object-cover relative z-[2] new-fancy-frame"> 
-                                <div class="hero-image-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(171,71,188,0.4)_0%,transparent_70%)] z-[1]"></div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <div class="col-lg-6 order-lg-1 text-center text-lg-start"> 
-                        <div class="hero-content py-8"> 
-                            <p class="hero-greeting mb-2 text-xl font-semibold text-[var(--violet-dark)]">Hello, I'm</p> 
-                            <h1 class="hero-title text-4xl md:text-5xl font-extrabold text-main m-0 min-h-[80px]"> 
-                                <span id="typingText" class="typing-text"></span> 
-                                <span class="typing-cursor text-main">|</span> 
-                            </h1> 
-                            <p class="hero-tagline mt-3 text-xl font-semibold text-[var(--violet-dark)]">Web Developer | UI Designer | Programmer</p> 
-                            <p class="hero-description mt-3 text-lg text-secondary max-w-[500px] mx-auto mx-lg-0 leading-loose"> 
-                                 modern web development and professional interface design. 
-                            </p> 
-                            <div class="hero-buttons mt-4 flex flex-wrap gap-3 justify-center justify-lg-start"> 
-                                <a href="#projects" class="btn btn-primary-custom bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] text-white px-6 py-3 rounded-full font-semibold no-underline border-none transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(106,27,154,0.4)]"> 
-                                    <i class="fas fa-eye me-2"></i>View My Work 
-                                </a> 
-                                <a href="#contact" class="btn btn-outline-custom bg-transparent text-[var(--violet-dark)] px-6 py-3 rounded-full font-semibold no-underline border-2 border-[var(--violet-dark)] transition-all duration-300 hover:bg-[var(--violet-dark)] hover:text-white hover:-translate-y-[3px]"> 
-                                    <i class="fas fa-envelope me-2"></i>Contact Me 
-                                </a> 
-                            </div> 
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-            <div class="floating-shapes absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden"> 
-                <div class="shape shape-1 absolute w-[100px] h-[100px] bg-[var(--violet-light)] rounded-full opacity-30 top-[20%] left-[10%]"></div> 
-                <div class="shape shape-2 absolute w-[150px] h-[150px] bg-[var(--violet-dark)] rounded-full opacity-30 top-[60%] right-[10%]"></div> 
-                <div class="shape shape-3 absolute w-[80px] h-[80px] bg-[var(--violet-light)] rounded-full opacity-30 bottom-[20%] left-[20%]"></div> 
-                <div class="shape shape-4 absolute w-[60px] h-[60px] bg-[var(--violet-dark)] rounded-full opacity-30 top-[30%] right-[30%]"></div> 
-            </div> 
-        </section> 
-
-        <section id="about" class="about-section py-5 relative"> 
-            <div class="container py-5"> 
-                <div class="row"> 
-                    <div class="col-12 text-center mb-5"> 
-                        <h2 class="section-title text-4xl font-extrabold text-main inline-block relative">About Me</h2> 
-                        <div class="section-line w-[80px] h-1 bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] mx-auto my-4 rounded"></div> 
-                    </div> 
-                </div> 
-                <div class="row align-items-center"> 
-                    <div class="col-lg-5 mb-4 mb-lg-0"> 
-                        <div class="about-image-wrapper relative"> 
-                            <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=600&fit=crop" alt="About Me" class="about-image img-fluid rounded-3xl shadow-2xl"> 
-                            <div class="about-stats absolute -bottom-5 -right-5 bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] p-6 rounded-2xl text-white text-center"> 
-                                <div class="stat-item"> 
-                                    <span class="stat-number block text-4xl font-extrabold">2+</span> 
-                                    <span class="stat-label text-sm">Years Experience</span> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <div class="col-lg-7"> 
-                        <div class="about-content"> 
-                            <h3 class="about-subtitle text-3xl font-bold text-[var(--violet-dark)] mb-4">Who Am I?</h3> 
-                            <p class="about-text text-secondary leading-loose mb-4"> 
-                                I'm Adham, a passionate web developer creating exceptional digital experiences. I believe good design combines beauty and functionality, always delivering innovative solutions that meet client needs. 
-                            </p> 
-                            <p class="about-text text-secondary leading-loose mb-4"> 
-                                I have experience working with the latest technologies and tools, enjoying challenging projects and turning them into successful products. 
-                            </p> 
-                            <div class="skills-section mt-4"> 
-                                <h4 class="skills-title text-xl font-bold text-main mb-4">My Skills</h4> 
-                                <div class="skills-grid grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fab fa-html5 text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">HTML5</span> 
-                                    </div> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fab fa-css3-alt text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">CSS3</span> 
-                                    </div> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fab fa-js text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">JavaScript</span> 
-                                    </div> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fab fa-bootstrap text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">Bootstrap</span> 
-                                    </div> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fas fa-wind text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">Tailwind</span> 
-                                    </div> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fab fa-git-alt text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">Git</span> 
-                                    </div> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fas fa-users text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">Team Work</span> 
-                                    </div> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fas fa-lightbulb text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">Problem Solving</span> 
-                                    </div> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fas fa-clock text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">Time Management</span> 
-                                    </div> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fas fa-comments text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">Communication</span> 
-                                    </div> 
-                                    <div class="skill-item card-bg p-4 rounded-2xl text-center shadow-lg transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl"> 
-                                        <i class="fas fa-gamepad text-4xl text-[var(--violet-dark)] mb-2 block"></i> 
-                                        <span class="text-sm font-semibold text-main">Gamer</span> 
-                                    </div> 
-                                </div> 
-                            </div> 
-                            <div class="interests-section mt-4"> 
-                                <h4 class="interests-title text-xl font-bold text-main mb-4">My Interests</h4> 
-                                <div class="interests-tags flex flex-wrap gap-2"> 
-                                    <span class="interest-tag bg-gradient-to-br from-[rgba(106,27,154,0.1)] to-[rgba(171,71,188,0.1)] text-[var(--violet-dark)] px-4 py-2 rounded-full text-sm font-semibold border border-[var(--violet-dark)] transition-all duration-300 hover:bg-[var(--violet-dark)] hover:text-white">Web Development</span> 
-                                    <span class="interest-tag bg-gradient-to-br from-[rgba(106,27,154,0.1)] to-[rgba(171,71,188,0.1)] text-[var(--violet-dark)] px-4 py-2 rounded-full text-sm font-semibold border border-[var(--violet-dark)] transition-all duration-300 hover:bg-[var(--violet-dark)] hover:text-white">UI/UX Design</span> 
-                                    <span class="interest-tag bg-gradient-to-br from-[rgba(106,27,154,0.1)] to-[rgba(171,71,188,0.1)] text-[var(--violet-dark)] px-4 py-2 rounded-full text-sm font-semibold border border-[var(--violet-dark)] transition-all duration-300 hover:bg-[var(--violet-dark)] hover:text-white">Programming</span> 
-                                    <span class="interest-tag bg-gradient-to-br from-[rgba(106,27,154,0.1)] to-[rgba(171,71,188,0.1)] text-[var(--violet-dark)] px-4 py-2 rounded-full text-sm font-semibold border border-[var(--violet-dark)] transition-all duration-300 hover:bg-[var(--violet-dark)] hover:text-white">Continuous Learning</span> 
-                                    <span class="interest-tag bg-gradient-to-br from-[rgba(106,27,154,0.1)] to-[rgba(171,71,188,0.1)] text-[var(--violet-dark)] px-4 py-2 rounded-full text-sm font-semibold border border-[var(--violet-dark)] transition-all duration-300 hover:bg-[var(--violet-dark)] hover:text-white">Gaming</span> 
-                                    <span class="interest-tag bg-gradient-to-br from-[rgba(106,27,154,0.1)] to-[rgba(171,71,188,0.1)] text-[var(--violet-dark)] px-4 py-2 rounded-full text-sm font-semibold border border-[var(--violet-dark)] transition-all duration-300 hover:bg-[var(--violet-dark)] hover:text-white">Music</span> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-        </section> 
-
-        <section id="projects" class="projects-section py-5 relative bg-overlay"> 
-            <div class="container py-5"> 
-                <div class="row"> 
-                    <div class="col-12 text-center mb-5"> 
-                        <h2 class="section-title text-4xl font-extrabold text-main inline-block relative">My Projects</h2> 
-                        <div class="section-line w-[80px] h-1 bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] mx-auto my-4 rounded"></div> 
-                        <p class="section-subtitle mt-3 text-lg text-secondary">Some of my featured work</p> 
-                    </div> 
-                </div> 
-                <div class="d-flex align-items-center justify-content-center gap-3 md:gap-4">
-                    <button class="slider-btn-custom rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] flex items-center justify-center text-xl transition-all duration-300 flex-shrink-0" id="sliderPrev"> 
-                        <i class="fas fa-chevron-left"></i> 
-                    </button> 
-                    <div class="slider-container relative max-w-[800px] w-full mx-auto overflow-hidden rounded-3xl shadow-2xl border border-[var(--border-color)]"> 
-                        <div class="slider-wrapper flex transition-transform duration-500" id="projectsSlider"> 
-                            <div class="slide min-w-full card-bg"> 
-                                <div class="slide-image h-[250px] md:h-[300px] overflow-hidden"> 
-                                    <img src="./Output1.jpg" alt="E-Commerce Website" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"> 
-                                </div> 
-                                <div class="slide-content p-6 md:p-8"> 
-                                    <h3 class="text-2xl font-bold text-main mb-3">E-Commerce Platform</h3> 
-                                    <p class="text-secondary leading-relaxed mb-4">A complete e-commerce platform with product management, shopping cart, and secure payment gateway.</p> 
-                                    <div class="slide-tech flex gap-2 mb-6 flex-wrap"> 
-                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">HTML</span> 
-                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">JAVASCRIPT</span> 
-                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">CSS</span> 
-                                    </div> 
-                                    <div class="slide-buttons flex flex-wrap gap-4"> 
-                                        <a href="https://github.com/adhamforu1-blip/mY-p/blob/main/Lab-17/index.html" target="_blank" class="btn btn-github bg-[#333] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:bg-black hover:-translate-y-[3px]"> 
-                                            <i class="fab fa-github"></i> GitHub 
-                                        </a> 
-                                        <a href="https://project-portfolio-1-adham.netlify.app/" target="_blank" class="btn btn-live bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(106,27,154,0.4)]"> 
-                                            <i class="fas fa-play"></i> Live Demo 
-                                        </a> 
-                                    </div> 
-                                </div> 
-                            </div> 
-                            <div class="slide min-w-full card-bg"> 
-                                <div class="slide-image h-[250px] md:h-[300px] overflow-hidden"> 
-                                    <img src="./Screenshot_24-3-2026_32139_exam-onsite-2.netlify.app.jpeg" alt="Analytics Dashboard" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"> 
-                                </div> 
-                                <div class="slide-content p-6 md:p-8"> 
-                                    <h3 class="text-2xl font-bold text-main mb-3">Analytics Dashboard</h3> 
-                                    <p class="text-secondary leading-relaxed mb-4">Professional dashboard for displaying data and statistics with interactive charts and real-time updates.</p> 
-                                    <div class="slide-tech flex gap-2 mb-6 flex-wrap"> 
-                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">bootstrap</span> 
-                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">Html</span> 
-                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">js</span> 
-                                    </div> 
-                                    <div class="slide-buttons flex flex-wrap gap-4"> 
-                                        <a href="https://github.com/loll-lk/a7a/blob/main/index.html" target="_blank" class="btn btn-github bg-[#333] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:bg-black hover:-translate-y-[3px]"> 
-                                            <i class="fab fa-github"></i> GitHub 
-                                        </a> 
-                                        <a href="https://exam-onsite-2.netlify.app/" target="_blank" class="btn btn-live bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(106,27,154,0.4)]"> 
-                                            <i class="fas fa-play"></i> Live Demo 
-                                        </a> 
-                                    </div> 
-                                </div> 
-                            </div> 
-                            <div class="slide min-w-full card-bg"> 
-                                <div class="slide-image h-[250px] md:h-[300px] overflow-hidden"> 
-                                    <img src="./Screenshot_25-3-2026_21927_keen-faloodeh-52bb09.netlify.app.jpeg" alt="Task Manager" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105"> 
-                                </div> 
-                                <div class="slide-content p-6 md:p-8"> 
-                                    <h3 class="text-2xl font-bold text-main mb-3">TSAHEEL WEP</h3> 
-                                    <p class="text-secondary leading-relaxed mb-4">Advanced web for e-ticket for bus or car.</p> 
-                                    <div class="slide-tech flex gap-2 mb-6 flex-wrap"> 
-                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">html</span> 
-                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">node.js</span> 
-                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">bootstrap</span> 
-                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">Tailwind</span> 
-                                    </div> 
-                                    <div class="slide-buttons flex flex-wrap gap-4"> 
-                                        <a href="https://github.com/loll-lk/new-p/blob/main/index.html" target="_blank" class="btn btn-github bg-[#333] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:bg-black hover:-translate-y-[3px]"> 
-                                            <i class="fab fa-github"></i> GitHub 
-                                        </a> 
-                                        <a href="https://keen-faloodeh-52bb09.netlify.app/" target="_blank" class="btn btn-live bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(106,27,154,0.4)]"> 
-                                            <i class="fas fa-play"></i> Live Demo 
-                                        </a> 
-                                    </div> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <button class="slider-btn-custom rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] flex items-center justify-center text-xl transition-all duration-300 flex-shrink-0" id="sliderNext"> 
-                        <i class="fas fa-chevron-right"></i> 
-                    </button> 
-                </div> 
-                <div class="slider-dots flex justify-center gap-2 mt-6" id="sliderDots"></div> 
-            </div> 
-        </section> 
-
-        <section id="contact" class="contact-section py-5 relative"> 
-            <div class="container py-5"> 
-                <div class="row"> 
-                    <div class="col-12 text-center mb-5"> 
-                        <h2 class="section-title text-4xl font-extrabold text-main inline-block relative">Get In Touch</h2> 
-                        <div class="section-line w-[80px] h-1 bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] mx-auto my-4 rounded"></div> 
-                        <p class="section-subtitle mt-3 text-lg text-secondary">Let's start a new project together</p> 
-                    </div> 
-                </div> 
-                <div class="row"> 
-                    <div class="col-lg-5 mb-4 mb-lg-0"> 
-                        <div class="contact-info"> 
-                            <h3 class="contact-subtitle text-3xl font-bold text-[var(--violet-dark)] mb-4">Contact Information</h3> 
-                            <p class="contact-text text-secondary leading-loose mb-8"> 
-                                Feel free to reach out for any inquiries or projects. I'm always ready to work on new and exciting ideas! 
-                            </p> 
-                            <div class="contact-items"> 
-                                <div class="contact-item flex items-center gap-4 mb-6"> 
-                                    <div class="contact-icon w-[50px] h-[50px] bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] rounded-2xl flex items-center justify-center text-white text-xl"> 
-                                        <i class="fas fa-envelope"></i> 
-                                    </div> 
-                                    <div class="contact-detail"> 
-                                        <h5 class="text-lg font-bold text-main mb-1">Email</h5> 
-                                        <p class="text-secondary m-0">adhamxc57@gmail.com</p> 
-                                    </div> 
-                                </div> 
-                                <div class="contact-item flex items-center gap-4 mb-6"> 
-                                    <div class="contact-icon w-[50px] h-[50px] bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] rounded-2xl flex items-center justify-center text-white text-xl"> 
-                                        <i class="fas fa-phone"></i> 
-                                    </div> 
-                                    <div class="contact-detail"> 
-                                        <h5 class="text-lg font-bold text-main mb-1">Phone</h5> 
-                                        <p class="text-secondary m-0">+20 115 370 7682</p> 
-                                    </div> 
-                                </div> 
-                                <div class="contact-item flex items-center gap-4 mb-6"> 
-                                    <div class="contact-icon w-[50px] h-[50px] bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] rounded-2xl flex items-center justify-center text-white text-xl"> 
-                                        <i class="fas fa-map-marker-alt"></i> 
-                                    </div> 
-                                    <div class="contact-detail"> 
-                                        <h5 class="text-lg font-bold text-main mb-1">Location</h5> 
-                                        <p class="text-secondary m-0">Egypt</p> 
-                                    </div> 
-                                </div> 
-                            </div> 
-                            <div class="social-links mt-4"> 
-                                <h5 class="text-lg font-bold text-main mb-4">Follow Me</h5> 
-                                <div class="social-icons flex gap-4"> 
-                                    <a href="https://wa.me/+201153707682" target="_blank" class="social-icon whatsapp w-[50px] h-[50px] rounded-2xl flex items-center justify-center text-xl text-white no-underline transition-all duration-300 hover:-translate-y-2 bg-[#25D366] hover:bg-[#1DA851]"> 
-                                        <i class="fab fa-whatsapp"></i> 
-                                    </a> 
-                                    <a href="https://instagram.com/yuta_up" target="_blank" class="social-icon instagram w-[50px] h-[50px] rounded-2xl flex items-center justify-center text-xl text-white no-underline transition-all duration-300 hover:-translate-y-2 bg-gradient-to-br from-[#f09433] to-[#bc1888]"> 
-                                        <i class="fab fa-instagram"></i> 
-                                    </a> 
-                                    <a href="https://discord.com/users/nigger._l" target="_blank" class="social-icon discord w-[50px] h-[50px] rounded-2xl flex items-center justify-center text-xl text-white no-underline transition-all duration-300 hover:-translate-y-2 bg-[#5865F2] hover:bg-[#4752C4]"> 
-                                        <i class="fab fa-discord"></i> 
-                                    </a> 
-                                    <a href="https://t.me/+201153707682" target="_blank" class="social-icon telegram w-[50px] h-[50px] rounded-2xl flex items-center justify-center text-xl text-white no-underline transition-all duration-300 hover:-translate-y-2 bg-[#0088cc] hover:bg-[#006699]"> 
-                                        <i class="fab fa-telegram-plane"></i> 
-                                    </a> 
-                                    <a href="https://github.com/loll-lk" target="_blank" class="social-icon github w-[50px] h-[50px] rounded-2xl flex items-center justify-center text-xl text-white no-underline transition-all duration-300 hover:-translate-y-2 bg-[#333] hover:bg-[#000]"> 
-                                        <i class="fab fa-github"></i> 
-                                    </a> 
-                                </div> 
-                            </div> 
-                        </div> 
-                    </div> 
-                    <div class="col-lg-7"> 
-                        <div class="contact-form-wrapper card-bg p-6 md:p-10 rounded-3xl shadow-2xl border border-[var(--border-color)]"> 
-                            <form id="contactForm" class="contact-form"> 
-                                <div class="row"> 
-                                    <div class="col-md-6 mb-3"> 
-                                        <div class="form-group"> 
-                                            <input type="text" id="name" name="name" class="form-control border-2 border-[var(--border-color)] rounded-xl px-4 py-3 bg-[var(--input-bg)] text-main focus:border-[var(--violet-dark)]" placeholder="Name"> 
-                                            <span class="error-message text-red-500 text-sm mt-1 block" id="nameError"></span> 
-                                        </div> 
-                                    </div> 
-                                    <div class="col-md-6 mb-3"> 
-                                        <div class="form-group"> 
-                                            <input type="email" id="email" name="email" class="form-control border-2 border-[var(--border-color)] rounded-xl px-4 py-3 bg-[var(--input-bg)] text-main focus:border-[var(--violet-dark)]" placeholder="Email"> 
-                                            <span class="error-message text-red-500 text-sm mt-1 block" id="emailError"></span> 
-                                        </div> 
-                                    </div> 
-                                </div> 
-                                <div class="mb-3"> 
-                                    <div class="form-group"> 
-                                        <input type="text" id="subject" name="subject" class="form-control border-2 border-[var(--border-color)] rounded-xl px-4 py-3 bg-[var(--input-bg)] text-main focus:border-[var(--violet-dark)]" placeholder="Subject"> 
-                                        <span class="error-message text-red-500 text-sm mt-1 block" id="subjectError"></span> 
-                                    </div> 
-                                </div> 
-                                <div class="mb-3"> 
-                                    <div class="form-group"> 
-                                        <textarea id="message" name="message" class="form-control border-2 border-[var(--border-color)] rounded-xl px-4 py-3 bg-[var(--input-bg)] text-main focus:border-[var(--violet-dark)]" rows="5" placeholder="Message"></textarea> 
-                                        <span class="error-message text-red-500 text-sm mt-1 block" id="messageError"></span> 
-                                    </div> 
-                                </div> 
-                                <button type="submit" class="btn btn-submit w-100 bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] text-white py-4 rounded-xl font-bold text-xl border-none cursor-pointer transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(106,27,154,0.4)]"> 
-                                    <i class="fas fa-paper-plane me-2"></i>Send Message 
-                                </button> 
-                            </form> 
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-        </section> 
-
-        <footer class="footer py-4 bg-[var(--footer-bg)] text-white"> 
-            <div class="container"> 
-                <div class="row align-items-center"> 
-                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0"> 
-                        <p class="footer-text mb-0 text-white"> 
-                            &copy; 2026 <span class="text-[var(--violet-light)] font-bold">Adham (⌐■_■)</span>. All rights reserved. 
-                        </p> 
-                    </div> 
-                    <div class="col-md-6 text-center text-md-end"> 
-                        <div class="footer-social flex justify-center md:justify-end gap-4"> 
-                            <a href="https://wa.me/+201153707682" target="_blank" class="text-white text-xl transition-all duration-300 hover:text-[var(--violet-light)]"><i class="fab fa-whatsapp"></i></a> 
-                            <a href="https://instagram.com/yuta_up" target="_blank" class="text-white text-xl transition-all duration-300 hover:text-[var(--violet-light)]"><i class="fab fa-instagram"></i></a> 
-                            <a href="https://discord.com/users/nigger._l" target="_blank" class="text-white text-xl transition-all duration-300 hover:text-[var(--violet-light)]"><i class="fab fa-discord"></i></a> 
-                            <a href="https://t.me/+201153707682" target="_blank" class="text-white text-xl transition-all duration-300 hover:text-[var(--violet-light)]"><i class="fab fa-telegram-plane"></i></a> 
-                        </div> 
-                    </div> 
-                </div> 
-            </div> 
-        </footer> 
-
+        <section id="home" class="hero-section d-flex align-items-center min-h-[100vh] relative overflow-hidden">
+            <div class="container">
+                <div class="row align-items-center min-vh-100">
+                    <div class="col-lg-6 order-lg-2 text-center mb-5 mb-lg-0">
+                        <div class="hero-image-container flex justify-center items-center">
+                            <div class="hero-image-wrapper relative w-[300px] h-[300px] md:w-[350px] md:h-[350px]">
+                                <img src="./images/5861469601638583971_120.jpg" alt="Adham Profile" class="hero-image w-full h-full object-cover relative z-[2] new-fancy-frame">
+                                <div class="hero-image-glow absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[400px] h-[400px] bg-[radial-gradient(circle,rgba(171,71,188,0.4)_0%,transparent_70%)] z-[1]"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 text-center text-lg-start">
+                        <div class="hero-content py-8">
+                            <p class="hero-greeting mb-2 text-xl font-semibold text-[var(--violet-dark)]">Hello, I'm</p>
+                            <h1 class="hero-title text-4xl md:text-5xl font-extrabold text-main m-0 min-h-[80px]">
+                                <span id="typingText" class="typing-text"></span>
+                                <span class="typing-cursor text-main">|</span>
+                            </h1>
+                            <p class="hero-tagline mt-3 text-xl font-semibold text-[var(--violet-dark)]">Web Developer | UI Designer | Programmer</p>
+                            <p class="hero-description mt-3 text-lg text-secondary max-w-[500px] mx-auto mx-lg-0 leading-loose">
+                                modern web development and professional interface design.
+                            </p>
+                            <div class="hero-buttons mt-4 flex flex-wrap gap-3 justify-center justify-lg-start">
+                                <a href="my-project.html" class="btn btn-primary-custom bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] text-white px-6 py-3 rounded-full font-semibold no-underline transition-all duration-300 hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(106,27,154,0.4)]">
+                                    <i class="fas fa-eye me-2"></i>View My Work
+                                </a>
+                                <a href="contact.html" class="btn btn-outline-custom bg-transparent text-[var(--violet-dark)] px-6 py-3 rounded-full font-semibold no-underline border-2 border-[var(--violet-dark)] transition-all duration-300 hover:bg-[var(--violet-dark)] hover:text-white hover:-translate-y-[3px]">
+                                    <i class="fas fa-envelope me-2"></i>Contact Me
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="floating-shapes absolute top-0 left-0 w-full h-full pointer-events-none overflow-hidden">
+                <div class="shape shape-1 absolute w-[100px] h-[100px] bg-[var(--violet-light)] rounded-full opacity-30 top-[20%] left-[10%]"></div>
+                <div class="shape shape-2 absolute w-[150px] h-[150px] bg-[var(--violet-dark)] rounded-full opacity-30 top-[60%] right-[10%]"></div>
+                <div class="shape shape-3 absolute w-[80px] h-[80px] bg-[var(--violet-light)] rounded-full opacity-30 bottom-[20%] left-[20%]"></div>
+                <div class="shape shape-4 absolute w-[60px] h-[60px] bg-[var(--violet-dark)] rounded-full opacity-30 top-[30%] right-[30%]"></div>
+            </div>
+        </section>
     </main>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script> 
-    <script src="https://cdn.emailjs.com/dist/email.min.js"></script> 
-    <script src="../portfolio/js/main.js"></script> 
-</body> 
+    <footer class="footer py-3 bg-[var(--footer-bg)] text-white">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p class="mb-0">&copy; 2026 <span class="text-[var(--violet-light)] font-bold">Adham (⌐■_■)</span>. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://wa.me/+201153707682" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/yuta_up" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.com/users/nigger._l" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://t.me/+201153707682" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
 </html>

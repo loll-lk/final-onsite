@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adham Pr | Projects</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body class="font-poppins bg-[var(--light-bg)] transition-all duration-300 overflow-x-hidden">
+
+    <aside class="sidebar-desktop d-none d-lg-flex flex-column align-items-center">
+        <div class="py-4 w-100 text-center mb-5">
+            <a class="text-decoration-none fw-bold" href="index.html">
+                <span class="logo-text text-2xl"><i class="fas fa-code"></i></span>
+            </a>
+        </div>
+        <ul class="nav flex-column w-100 text-center gap-4 px-2 m-0">
+            <li class="nav-item"> <a class="nav-link-custom" href="index.html" title="Home"><i class="fas fa-home text-xl"></i></a> </li>
+            <li class="nav-item"> <a class="nav-link-custom" href="about.html" title="About"><i class="fas fa-user text-xl"></i></a> </li>
+            <li class="nav-item"> <a class="nav-link-custom active" href="my-project.html" title="Projects"><i class="fas fa-briefcase text-xl"></i></a> </li>
+            <li class="nav-item"> <a class="nav-link-custom" href="contact.html" title="Contact"><i class="fas fa-envelope text-xl"></i></a> </li>
+        </ul>
+    </aside>
+
+    <div class="mobile-nav-wrapper d-lg-none fixed-top w-100">
+        <div class="mobile-header d-flex justify-content-between align-items-center py-3 px-4">
+            <a class="text-decoration-none fw-bold m-0" href="index.html">
+                <span class="logo-text text-2xl">MY one</span>
+            </a>
+            <button id="mobileMenuBtn" class="border-0 bg-transparent text-2xl text-[var(--violet-dark)] transition-all">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        <div id="mobileMenu" class="mobile-dropdown">
+            <ul class="mobile-nav-list m-0 p-3 text-center list-unstyled">
+                <li><a class="mobile-nav-link" href="index.html">Home</a></li>
+                <li><a class="mobile-nav-link" href="about.html">About</a></li>
+                <li><a class="mobile-nav-link" href="my-project.html">Projects</a></li>
+                <li><a class="mobile-nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="floating-controls fixed bottom-6 right-6 z-[999]">
+        <button id="themeToggle" class="floating-btn white-btn"> <i class="fas fa-moon"></i> </button>
+    </div>
+
+    <main id="main-content">
+        <section id="projects" class="projects-section py-5 relative bg-overlay" style="padding-top: 100px;">
+            <div class="container py-5">
+                <div class="row">
+                    <div class="col-12 text-center mb-5">
+                        <h2 class="section-title text-4xl font-extrabold text-main inline-block relative">My Projects</h2>
+                        <div class="section-line w-[80px] h-1 bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] mx-auto my-4 rounded"></div>
+                        <p class="section-subtitle mt-3 text-lg text-secondary">Some of my featured work</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-center gap-3 md:gap-4">
+                    <button class="slider-btn-custom rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] flex items-center justify-center text-xl transition-all duration-300 flex-shrink-0" id="sliderPrev">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-container relative max-w-[800px] w-full mx-auto overflow-hidden rounded-3xl shadow-2xl border border-[var(--border-color)]">
+                        <div class="slider-wrapper flex transition-transform duration-500" id="projectsSlider">
+                            <div class="slide min-w-full card-bg">
+                                <div class="slide-image h-[250px] md:h-[300px] overflow-hidden">
+                                    <img src="./images/Output1.jpg" alt="E-Commerce Website" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <div class="slide-content p-6 md:p-8">
+                                    <h3 class="text-2xl font-bold text-main mb-3">E-Commerce Platform</h3>
+                                    <p class="text-secondary leading-relaxed mb-4">A complete e-commerce platform with product management, shopping cart, and secure payment gateway.</p>
+                                    <div class="slide-tech flex gap-2 mb-6 flex-wrap">
+                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">HTML</span>
+                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">JAVASCRIPT</span>
+                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">CSS</span>
+                                    </div>
+                                    <div class="slide-buttons flex flex-wrap gap-4">
+                                        <a href="https://github.com/adhamforu1-blip/mY-p/blob/main/Lab-17/index.html" target="_blank" class="btn btn-github bg-[#333] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:bg-black hover:-translate-y-[3px]">
+                                            <i class="fab fa-github"></i> GitHub
+                                        </a>
+                                        <a href="https://project-1-adham.netlify.app/" target="_blank" class="btn btn-live bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(106,27,154,0.4)]">
+                                            <i class="fas fa-play"></i> Live Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide min-w-full card-bg">
+                                <div class="slide-image h-[250px] md:h-[300px] overflow-hidden">
+                                    <img src="./images/Screenshot_24-3-2026_32139_exam-onsite-2.netlify.app.jpeg" alt="Analytics Dashboard" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <div class="slide-content p-6 md:p-8">
+                                    <h3 class="text-2xl font-bold text-main mb-3">Analytics Dashboard</h3>
+                                    <p class="text-secondary leading-relaxed mb-4">Professional dashboard for displaying data and statistics with interactive charts and real-time updates.</p>
+                                    <div class="slide-tech flex gap-2 mb-6 flex-wrap">
+                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">bootstrap</span>
+                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">Html</span>
+                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">js</span>
+                                    </div>
+                                    <div class="slide-buttons flex flex-wrap gap-4">
+                                        <a href="https://github.com/loll-lk/a7a/blob/main/index.html" target="_blank" class="btn btn-github bg-[#333] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:bg-black hover:-translate-y-[3px]">
+                                            <i class="fab fa-github"></i> GitHub
+                                        </a>
+                                        <a href="https://aesthetic-kelpie-6d54fb.netlify.app/" target="_blank" class="btn btn-live bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(106,27,154,0.4)]">
+                                            <i class="fas fa-play"></i> Live Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="slide min-w-full card-bg">
+                                <div class="slide-image h-[250px] md:h-[300px] overflow-hidden">
+                                    <img src="./images/Screenshot_25-3-2026_21927_keen-faloodeh-52bb09.netlify.app.jpeg" alt="Task Manager" class="w-full h-full object-cover transition-transform duration-500 hover:scale-105">
+                                </div>
+                                <div class="slide-content p-6 md:p-8">
+                                    <h3 class="text-2xl font-bold text-main mb-3">TSAHEEL WEP</h3>
+                                    <p class="text-secondary leading-relaxed mb-4">Advanced web for e-ticket for bus or car.</p>
+                                    <div class="slide-tech flex gap-2 mb-6 flex-wrap">
+                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">html</span>
+                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">node.js</span>
+                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">bootstrap</span>
+                                        <span class="bg-[rgba(106,27,154,0.1)] text-[var(--violet-dark)] px-3 py-1 rounded-full text-sm font-semibold">Tailwind</span>
+                                    </div>
+                                    <div class="slide-buttons flex flex-wrap gap-4">
+                                        <a href="https://github.com/loll-lk/new-p/blob/main/index.html" target="_blank" class="btn btn-github bg-[#333] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:bg-black hover:-translate-y-[3px]">
+                                            <i class="fab fa-github"></i> GitHub
+                                        </a>
+                                        <a href="https://dreamy-cocada-89a385.netlify.app/" target="_blank" class="btn btn-live bg-gradient-to-br from-[var(--violet-dark)] to-[var(--violet-light)] text-white px-5 py-3 rounded-full font-semibold no-underline transition-all duration-300 flex items-center gap-2 hover:-translate-y-[3px] hover:shadow-[0_10px_30px_rgba(106,27,154,0.4)]">
+                                            <i class="fas fa-play"></i> Live Demo
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="slider-btn-custom rounded-full w-[40px] h-[40px] md:w-[50px] md:h-[50px] flex items-center justify-center text-xl transition-all duration-300 flex-shrink-0" id="sliderNext">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
+                </div>
+                <div class="slider-dots flex justify-center gap-2 mt-6" id="sliderDots"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer py-3 bg-[var(--footer-bg)] text-white">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-copyright">
+                    <p class="mb-0">&copy; 2026 <span class="text-[var(--violet-light)] font-bold">Adham (⌐■_■)</span>. All rights reserved.</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://wa.me/+201153707682" target="_blank"><i class="fab fa-whatsapp"></i></a>
+                    <a href="https://instagram.com/yuta_up" target="_blank"><i class="fab fa-instagram"></i></a>
+                    <a href="https://discord.com/users/nigger._l" target="_blank"><i class="fab fa-discord"></i></a>
+                    <a href="https://t.me/+201153707682" target="_blank"><i class="fab fa-telegram-plane"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+</html>
